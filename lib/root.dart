@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_logic/screens/multi_image_selection.dart';
+import 'package:flutter_logic/screens/image_selection.dart';
 import 'package:flutter_logic/screens/single_selection.dart';
 import 'package:flutter_logic/screens/toggle_selection.dart';
 
@@ -12,17 +12,14 @@ class Root extends StatefulWidget {
 
 class _RootState extends State<Root> {
   final PageController controller = PageController();
-  List<Widget> pages = [
-    SingleSelection(),
-    MultiImageSelection(),
-    ToggleSelection(),
-  ];
+  List<Widget> pages = [SingleSelection(), ImageSelection(), ToggleSelection()];
   int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
         controller: controller,
         onPageChanged: (index) {
           setState(() {

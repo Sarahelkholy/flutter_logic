@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MultiImageSelection extends StatelessWidget {
-  const MultiImageSelection({super.key});
+class ImageSelection extends StatelessWidget {
+  const ImageSelection({super.key});
 
   @override
   Widget build(BuildContext context) {
