@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_logic/screens/attachment%20and%20images/upload_image.dart';
-import 'package:flutter_logic/screens/attachment%20and%20images/upload_multi_images.dart';
+import 'package:flutter_logic/screens/attachment_and_images/upload_image.dart';
+import 'package:flutter_logic/screens/attachment_and_images/upload_multi_images.dart';
+import 'package:flutter_logic/screens/attachment_and_images/upload_video.dart';
 import 'package:flutter_logic/screens/selection/image_selection.dart';
 import 'package:flutter_logic/screens/selection/multi_selection.dart';
 import 'package:flutter_logic/screens/selection/single_selection.dart';
@@ -16,15 +17,16 @@ class Root extends StatefulWidget {
 class _RootState extends State<Root> {
   final PageController controller = PageController();
   List<Widget> pages = [
+    /// attachments and images
+    UploadImage(),
+    UploadMultiImages(),
+    UploadVideo(),
+
     /// selection
     SingleSelection(),
     ImageSelection(),
     ToggleSelection(),
     MultiSelection(),
-
-    /// attachments and images
-    UploadImage(),
-    UploadMultiImages(),
   ];
   int selectedIndex = 0;
 
