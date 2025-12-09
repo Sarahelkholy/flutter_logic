@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_logic/screens/image_selection.dart';
-import 'package:flutter_logic/screens/multi_selection.dart';
-import 'package:flutter_logic/screens/single_selection.dart';
-import 'package:flutter_logic/screens/toggle_selection.dart';
+import 'package:flutter_logic/screens/attachment%20and%20images/upload_image.dart';
+import 'package:flutter_logic/screens/selection/image_selection.dart';
+import 'package:flutter_logic/screens/selection/multi_selection.dart';
+import 'package:flutter_logic/screens/selection/single_selection.dart';
+import 'package:flutter_logic/screens/selection/toggle_selection.dart';
 
 class Root extends StatefulWidget {
   const Root({super.key});
@@ -14,10 +15,14 @@ class Root extends StatefulWidget {
 class _RootState extends State<Root> {
   final PageController controller = PageController();
   List<Widget> pages = [
+    /// selection
     SingleSelection(),
     ImageSelection(),
     ToggleSelection(),
     MultiSelection(),
+
+    /// attachments and images
+    UploadImage(),
   ];
   int selectedIndex = 0;
 
