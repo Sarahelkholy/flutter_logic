@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_logic/screens/attachment%20and%20images/upload_image.dart';
+import 'package:flutter_logic/screens/attachment%20and%20images/upload_multi_images.dart';
 import 'package:flutter_logic/screens/selection/image_selection.dart';
 import 'package:flutter_logic/screens/selection/multi_selection.dart';
 import 'package:flutter_logic/screens/selection/single_selection.dart';
@@ -23,6 +24,7 @@ class _RootState extends State<Root> {
 
     /// attachments and images
     UploadImage(),
+    UploadMultiImages(),
   ];
   int selectedIndex = 0;
 
