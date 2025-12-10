@@ -3,6 +3,7 @@ import 'package:flutter_logic/screens/attachment_and_images/upload_file.dart';
 import 'package:flutter_logic/screens/attachment_and_images/upload_image.dart';
 import 'package:flutter_logic/screens/attachment_and_images/upload_multi_images.dart';
 import 'package:flutter_logic/screens/attachment_and_images/upload_video.dart';
+import 'package:flutter_logic/screens/search_and_filter/search_and_filter.dart';
 import 'package:flutter_logic/screens/selection/image_selection.dart';
 import 'package:flutter_logic/screens/selection/multi_selection.dart';
 import 'package:flutter_logic/screens/selection/single_selection.dart';
@@ -18,6 +19,9 @@ class Root extends StatefulWidget {
 class _RootState extends State<Root> {
   final PageController controller = PageController();
   List<Widget> pages = [
+    /// search and filter
+    Search(),
+
     /// attachments and images
     UploadImage(),
     UploadMultiImages(),
